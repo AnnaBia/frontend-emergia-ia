@@ -1,0 +1,98 @@
+<po-page-default>
+  <div class="page-wrapper">
+    <div class="container-wrapper po-pt-5">
+      <po-container class="po-xl-8" p-title="O que é emergia?" [p-no-border]="true">
+        <div class="po-lg-7">
+          <div class="po-lg-8">
+            <p class="po-font-subtitle">
+              Você já parou pra pensar em quanta natureza foi usada para produzir algo simples, como um copo de água
+              tratada?
+            </p>
+          </div>
+          <div class="po-lg-12 po-pt-2">
+            <p class="po-font-text">
+              A emergia ajuda a responder isso. Ela calcula toda a energia da natureza – especialmente a energia solar –
+              necessária para gerar produtos, recursos ou serviços que usamos no nosso dia a dia.
+            </p>
+
+            <p class="po-font-text">
+              Mais do que medir impactos ambientais, a emergia nos mostra o valor oculto da natureza em cada etapa da
+              produção
+              humana.
+            </p>
+
+            <po-button class="po-pt-2" p-icon="an an-arrow-right" p-kind="primary" p-label="Simular cálculo de emergia"
+              (p-click)="goToCalculator()"></po-button>
+          </div>
+        </div>
+
+        <div class="po-lg-5">
+          <img
+            src="https://img.freepik.com/vetores-gratis/um-monte-de-gente-fazendo-perguntas_23-2148917152.jpg?t=st=1746922294~exp=1746925894~hmac=e366c15e80401878617dd059b41697c71430fef8a8fde18008cee5159f9432df&w=826"
+            alt="Descrição da imagem" witdh="350" height="350" />
+        </div>
+      </po-container>
+    </div>
+
+    <div class="container-wrapper container-card-background po-pt-5 po-pb-5">
+      <po-container class="po-xl-8 card-container card-container-title" p-title="Por que isso importa?"
+        [p-no-border]="true">
+        <div class="card-container-description">
+          <p class="po-font-text po-pb-2 po-lg-6">Porque entender quanto a natureza investe em nossas atividades é
+            essencial para tomar
+            decisões mais sustentáveis.
+          </p>
+        </div>
+
+        <div class="po-row card-container-content">
+          <div class="po-lg-6">
+            <img
+              src="https://img.freepik.com/vetores-gratis/casa-com-salvar-os-icones-do-mundo_24877-50677.jpg?t=st=1746925342~exp=1746928942~hmac=b2ba45218f032f9526359abfe4c26c29e614cb187c7b607f047547e4914c7208&w=826"
+              alt="Descrição da imagem" witdh="350" height="350" />
+          </div>
+
+          <div class="po-lg-6 card-container-cards">
+            <po-widget [p-no-shadow]="false">
+              <div class="card-content">
+                <po-icon p-icon="an-fill an-number-circle-one"></po-icon>
+                <p class="po-font-text">Mostra o verdadeiro peso dos recursos naturais que usamos.</p>
+              </div>
+            </po-widget>
+            <po-widget [p-no-shadow]="false">
+              <div class="card-content">
+                <po-icon p-icon="an-fill an-number-circle-two"></po-icon>
+                <p class="po-font-text">Valoriza os serviços que a natureza oferece, mesmo quando não são cobrados ou
+                  medidos
+                  no
+                  mercado.</p>
+              </div>
+
+            </po-widget>
+            <po-widget [p-no-shadow]="false">
+              <div class="card-content">
+                <po-icon p-icon="an-fill an-number-circle-three"></po-icon>
+                <p class="po-font-text">Ajuda a planejar processos mais eficientes e menos dependentes de energia
+                  externa.
+                </p>
+              </div>
+            </po-widget>
+          </div>
+        </div>
+      </po-container>
+    </div>
+
+    <div class="container-wrapper po-pt-5 po-pb-5">
+      <po-container class="po-xl-8" p-title="Como a emergia se compara a outras abordagens?" [p-no-border]="true">
+        <div class="po-pb-2">
+          <p class="po-font-text">Enquanto métodos como a Avaliação do Ciclo de Vida (ACV) avaliam os
+            impactos do ponto de
+            vista do consumidor, a
+            emergia olha com os olhos da natureza.</p>
+          <p class="po-font-text">Veja a comparação abaixo:</p>
+        </div>
+        <po-table p-components-size="small" [p-columns]="columns" [p-hide-columns-manager]="true" [p-items]="items"
+          [p-spacing]="spacingSmall"></po-table>
+      </po-container>
+    </div>
+  </div>
+</po-page-default>

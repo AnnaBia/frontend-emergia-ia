@@ -1,0 +1,42 @@
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.container-card-background, .container-card-background po-container {
+  background-color: #E6F4EA;
+  --background: #E6F4EA;
+}
+
+.card-container-title, .card-container-description {
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+}
+
+.card-container-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-container-content {
+  display: flex;
+  align-items: center;
+}
+
+.card-content {
+  display: flex;
+}
+
+po-icon {
+  font-size: 2rem;
+  padding-right: 1rem;
+  color: #4E9525;
+}

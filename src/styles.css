@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+po-button {
+  --color: #4E9525;
+  --color-hover: #2E5A1C;
+  --color-pressed	: #1B4B36;
+}
+
+po-table {
+  --background-color-headline: #E6F4EA ;
+}

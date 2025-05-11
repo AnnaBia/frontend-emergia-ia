@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import { PoThemeA11yEnum, poThemeDefault, PoThemeService } from '@po-ui/ng-components';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  standalone: false
 })
 export class AppComponent {
-  title = 'front-emergy';
+  constructor(private poTheme: PoThemeService) {
+    this.poTheme.setTheme(poThemeDefault, 0, PoThemeA11yEnum.AA);
+  }
 }
