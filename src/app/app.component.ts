@@ -9,6 +9,6 @@ import { PoThemeA11yEnum, poThemeDefault, PoThemeService } from '@po-ui/ng-compo
 })
 export class AppComponent {
   constructor(private poTheme: PoThemeService) {
-    this.poTheme.setTheme(poThemeDefault, 0, PoThemeA11yEnum.AA);
+    this.poTheme.setCurrentThemeA11y(PoThemeA11yEnum.AA);
   }
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { PoTableColumnSpacing } from '@po-ui/ng-components';
+import { PoTableColumnSpacing, PoThemeA11yEnum, poThemeDefault, PoThemeService } from '@po-ui/ng-components';
 
 @Component({
   selector: 'app-emergy',
@@ -24,7 +24,7 @@ export class EmergyComponent {
 
   spacingSmall: PoTableColumnSpacing = PoTableColumnSpacing.Small;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   goToCalculator() {
     this.router.navigate(['/calculadora']);

@@ -8,18 +8,22 @@ import { PoModule } from '@po-ui/ng-components';
 import { EmergyComponent } from './emergy/emergy.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ResultsComponent } from './results/results.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmergyComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    PoModule
+    PoModule,
+    ReactiveFormsModule // <-- necessário para FormGroup e formControlName
   ],
   providers: [
     provideHttpClient(withInterceptorsFromDi()),

@@ -1,4 +1,134 @@
 <po-page-default>
-  <po-button class="po-pt-2" p-icon="an an-arrow-left" p-label="Voltar" p-kind="primary"
-    (p-click)="goToHome()"></po-button>
+  <div class="page-wrapper">
+
+    <po-button class="po-pt-2" p-icon="an an-arrow-left" p-label="Voltar" p-kind="tertiary"
+      (p-click)="goToHome()"></po-button>
+
+    <form [formGroup]="form">
+
+      <!-- 1. Informações do Sistema de IA -->
+      <div class="container-wrapper po-pt-2">
+        <po-widget class="po-lg-10" p-title="1. Informações do Sistema de IA">
+          <po-input class="po-lg-6" name="nomeSistema" formControlName="nomeSistema"
+            p-label="Nome/Descrição do Sistema de IA"
+            p-additional-help-tooltip="Informe o nome ou descrição resumida do sistema de inteligência artificial analisado."
+            p-help="Ex: Chatbot de Atendimento, Modelo de Visão Computacional" p-size="small">
+          </po-input>
+
+          <po-combo formControlName="tipoSistema" class="po-lg-3 po-md-6" name="tipoSistema" p-label="Tipo de Sistema"
+            p-additional-help-tooltip="Selecione a categoria geral do sistema de IA utilizado."
+            p-help="Ex: Chatbot, Sistema Embarcado" [p-options]="tipoSistemaOptions" p-size="small">
+          </po-combo>
+
+          <po-combo formControlName="faseAnalisada" class="po-lg-3 po-md-6" name="faseAnalisada"
+            p-label="Fase Analisada"
+            p-additional-help-tooltip="Determine qual fase do ciclo de vida da IA está sendo considerada para análise de emergia."
+            p-help="Ex: Treinamento, Inferência" [p-options]="faseOptions" p-size="small">
+          </po-combo>
+        </po-widget>
+      </div>
+
+      <!-- 2. Recursos Computacionais -->
+      <div class="container-wrapper po-pt-2">
+        <po-widget class="po-lg-10" p-title="2. Recursos Computacionais">
+          <po-combo formControlName="tipoHardware" class="po-lg-3 po-md-6" p-label="Tipo de Hardware Utilizado"
+            p-additional-help-tooltip="Indique o tipo de hardware utilizado no processamento (como treinamento ou inferência)."
+            p-help="Ex: GPU, CPU, TPU" p-size="small">
+          </po-combo>
+
+          <po-number formControlName="tempoUso" class="po-lg-3 po-md-6" p-label="Tempo de Uso (horas)"
+            p-additional-help-tooltip="Tempo total de uso do hardware durante a fase analisada." p-help="Ex: 120"
+            p-size="small">
+          </po-number>
+
+          <po-number formControlName="consumoEnergetico" class="po-lg-3 po-md-6"
+            p-label="Consumo Energético Médio (kWh/h)"
+            p-additional-help-tooltip="Consumo médio de energia elétrica por hora de uso do hardware, medido em kWh."
+            p-help="Ex: 0.6" p-size="small">
+          </po-number>
+
+          <po-number formControlName="uevEnergia" class="po-lg-3 po-md-6" p-label="UEV da Energia Elétrica (sej/kWh)"
+            p-additional-help-tooltip="Valor de Unidade de Emergia por energia elétrica com base na literatura (ex: base EPA)."
+            p-help="Ex: 8.4E+04" p-size="small">
+          </po-number>
+
+          <po-input formControlName="emergiaComputacional" class="po-lg-3 po-md-6"
+            p-label="Emergia Computacional (se calculado separadamente)"
+            p-additional-help-tooltip="Resultado do produto entre Consumo Energético Médio e UEV da Energia Elétrica."
+            p-help="Ex: 0.6 * 8.4E+04 = 5.04E+04" p-size="small">
+          </po-input>
+        </po-widget>
+      </div>
+
+      <!-- 3. Recursos Humanos e Serviços -->
+      <div class="container-wrapper po-pt-2">
+        <po-widget class="po-lg-10" p-title="3. Recursos Humanos e Serviços">
+          <po-number formControlName="horasTrabalhoHumano" class="po-lg-3 po-md-6"
+            p-label="Horas de Trabalho Humano Envolvidas"
+            p-additional-help-tooltip="Informe o total de horas de trabalho humano investidas no desenvolvimento, treinamento ou operação do sistema."
+            p-help="Ex: 100 horas de desenvolvedor + 20 horas de cientista de dados" p-size="small">
+          </po-number>
+
+          <po-input formControlName="tipoProfissional" class="po-lg-3 po-md-6" p-label="Tipo de Profissional"
+            p-additional-help-tooltip="Descreva os perfis profissionais envolvidos no sistema."
+            p-help="Ex: Desenvolvedor, Cientista de Dados" p-size="small">
+          </po-input>
+
+          <po-number formControlName="uevServicosHumanos" class="po-lg-3 po-md-6"
+            p-label="UEV de Serviços Humanos ou Monetários"
+            p-additional-help-tooltip="Valor de emergia atribuído por hora de trabalho ou por unidade monetária (R$)."
+            p-help="Ex: 3.2E+05 sej/hora" p-size="small">
+          </po-number>
+        </po-widget>
+      </div>
+
+      <!-- 4. Materiais e Equipamentos -->
+      <div class="container-wrapper po-pt-2">
+        <po-widget class="po-lg-10" p-title="4. Materiais e Equipamentos">
+          <po-input formControlName="dispositivoFinal" class="po-lg-3 po-md-6"
+            p-label="Dispositivo Final / Infraestrutura Física"
+            p-additional-help-tooltip="Descreva o dispositivo físico em que o sistema de IA será implantado."
+            p-help="Ex: Servidor local, Raspberry Pi, Celular" p-size="small">
+          </po-input>
+
+          <po-number formControlName="massaOuCustoEquipamento" class="po-lg-3 po-md-6"
+            p-label="Massa ou Custo Total do Equipamento"
+            p-additional-help-tooltip="Informe a massa (g) ou custo total (R$) do equipamento, considerando o valor correspondente ao UEV (sej/g ou sej/$)."
+            p-help="Ex: 1500g ou R$2500" p-size="small">
+          </po-number>
+
+          <po-number formControlName="tempoVidaUtil" class="po-lg-3 po-md-6"
+            p-label="Tempo de Vida Útil (anos ou ciclos de uso)"
+            p-additional-help-tooltip="Informe a estimativa de vida útil do equipamento, usada para distribuir a emergia por unidade de serviço."
+            p-help="Ex: 3 anos ou 1000 ciclos" p-size="small">
+          </po-number>
+        </po-widget>
+      </div>
+
+      <!-- 5. Transporte e Infraestrutura -->
+      <div class="container-wrapper po-pt-2">
+        <po-widget class="po-lg-10" p-title="5. Transporte e Infraestrutura">
+          <po-combo formControlName="tipoTransporte" class="po-lg-3 po-md-6" p-label="Tipo de Transporte"
+            p-additional-help-tooltip="Selecione o tipo de transporte utilizado para deslocamento de dispositivos físicos."
+            p-help="Ex: Terrestre, Aéreo" p-size="small">
+          </po-combo>
+
+          <po-number formControlName="distanciaPercorrida" class="po-lg-3 po-md-6" p-label="Distância Percorrida (km)"
+            p-additional-help-tooltip="Informe a distância percorrida no transporte físico dos equipamentos ou componentes."
+            p-help="Ex: 50 km" p-size="small">
+          </po-number>
+
+          <po-number formControlName="uevTransporte" class="po-lg-3 po-md-6" p-label="UEV do Transporte"
+            p-additional-help-tooltip="Valor de emergia por unidade de transporte, com base em sej/km ou sej/kg·km conforme literatura EPA."
+            p-help="Ex: 4.6E+04 sej/km" p-size="small">
+          </po-number>
+        </po-widget>
+      </div>
+    </form>
+
+    <div class="po-row po-pt-2 footer">
+      <po-button p-label="Limpar" (p-click)="resetForm()"></po-button>
+      <po-button p-label="Calcular Emergia Total" p-kind="primary" (p-click)="onSubmit()"></po-button>
+    </div>
+  </div>
 </po-page-default>
