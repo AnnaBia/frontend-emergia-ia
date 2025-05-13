@@ -1,27 +1,37 @@
-# FrontEmergy
+# Emergia - Frontend
+Projeto desenvolvido como parte da Atividade Prática Supervisionada (APS) do curso de Bacharelado em Ciência da Computação. Este repositório contém o frontend do conceito Emergia, desenvolvido em Angular com PO UI.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+## Tecnologias Utilizadas
 
-## Development server
+- [Node.js 18.19.1](https://www.npmjs.com/package/node/v/18.19.1)
+> Recomenda-se instalar o [**Node Version Manager (nvm)**](https://github.com/nvm-sh/nvm) para facilitar o gerenciamento da versão correta do Node.js. Com o nvm, você pode alternar facilmente entre diferentes versões do Node sem conflitos. 
+- [Angular 19.0.5](https://www.npmjs.com/package/@angular/cli/v/19.0.5)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Instalação
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone o repositório para sua máquina local:
+    ```bash
+    git clone https://github.com/AnnaBia/frontend-emergy.git
+    ```
+2. Navegue até o diretório do projeto:
+    ```bash
+    cd frontend-emergy
+    ```
+3. Instale as dependências do projeto:
+    ```bash
+    npm i
+    ```
 
-## Build
+## Uso
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Para iniciar o servidor de desenvolvimento, execute o comando:
+    ```bash
+    ng serve
+    ```
+    O projeto será iniciado na porta `http://localhost:4200`.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+2. Para abrir o navegador automaticamente, utilize:
+    ```bash
+    ng serve --o
+    ```
