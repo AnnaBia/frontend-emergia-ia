@@ -1,12 +1,56 @@
 <po-page-default>
   <div class="page-wrapper">
 
-    <!-- Retorna para os dados do form preenchidos e bloqueados -->
-    <po-button class="po-pt-2" p-icon="an an-arrow-left" p-label="Voltar" p-kind="tertiary"
-      (p-click)="goToCalculator()"></po-button>
+    <div *ngIf="showResults" class="container-wrapper po-pt-2">
+      <po-container class="po-lg-10" p-title="Resultados">
 
+        <div class="po-row po-lg-12 po-pb-2">
+          <div class="po-md-6 po-lg-4">
+            <po-info p-label="Nome IA" [p-value]="resultado?.entradaIA.nome ?? '-'"></po-info>
+          </div>
+          <div class="po-md-6 po-lg-4">
+            <po-info p-label="Fase" [p-value]="resultado?.entradaIA.fase ?? '-'"></po-info>
+          </div>
+          <div class="po-md-6 po-lg-4">
+            <po-info p-label="Inferências" [p-value]="resultado?.entradaIA.inferencia ?? 0"></po-info>
+          </div>
+        </div>
+
+        <div class="po-row">
+          <po-widget class="po-md-6 po-lg-4">
+            <po-info p-label="Total de Emergia" [p-value]="(resultado?.resultadoFinal.total ?? 0) + ' sej'"></po-info>
+          </po-widget>
+          <po-widget class="po-md-6 po-lg-4">
+            <po-info p-label="Emergia por Hora"
+              [p-value]="(resultado?.resultadoFinal?.porHora ?? 0) + ' sej/h'"></po-info>
+          </po-widget>
+          <po-widget class="po-md-6 po-lg-4">
+            <po-info p-label="Emergia por Inferência"
+              [p-value]="(resultado?.resultadoFinal?.porInferencia ?? 0) + ' sej/inf'"></po-info>
+          </po-widget>
+        </div>
+
+        <div class="po-row po-mt-2" style="align-items:center;">
+          <div class="po-md-12 po-lg-5">
+            <po-chart [p-type]="chartType" [p-title]="chartTitle" [p-categories]="chartCategories"
+              [p-series]="chartSeries" [p-height]="350">
+            </po-chart>
+          </div>
+          <div class="po-md-12 po-lg-7">
+            <p class="po-font-text-large po-pb-2">Detalhamento dos Valores e Contribuições (%)</p>
+            <po-table [p-columns]="tabelaEmergiaColumns" [p-items]="emergyDataTable" [p-hide-columns-manager]="true">
+            </po-table>
+            <div class="po-row po-pt-2 actions">
+              <po-button p-label="Exportar para PDF" (p-click)="exportPdf()" p-kind="tertiary"
+                p-icon="an an-file-pdf"></po-button>
+              <po-button class="po-ml-2" p-label="Exportar para Excel" (p-click)="exportExcel()" p-kind="tertiary"
+                p-icon="an an-microsoft-excel-logo"></po-button>
+            </div>
+          </div>
+        </div>
+      </po-container>
+    </div>
     <div class="po-row po-pt-2 footer">
-      <!-- Retorna para o form -->
       <po-button p-label="Nova simulação" (p-click)="goToCalculator()"></po-button>
       <po-button p-label="Voltar para o início" p-kind="primary" (p-click)="goToHome()"></po-button>
     </div>

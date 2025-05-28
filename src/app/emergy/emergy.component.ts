@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { PoTableColumnSpacing, PoThemeA11yEnum, poThemeDefault, PoThemeService } from '@po-ui/ng-components';
+import { PoTableColumnSpacing } from '@po-ui/ng-components';
 
 @Component({
   selector: 'app-emergy',
@@ -10,21 +10,32 @@ import { PoTableColumnSpacing, PoThemeA11yEnum, poThemeDefault, PoThemeService }
 })
 export class EmergyComponent {
   columns = [
-    { property: 'aspecto', label: 'Aspecto' },
-    { property: 'emergia', label: 'Com emergia' },
-    { property: 'acv', label: 'Com ACV' }
+    { property: 'item', label: 'Elemento do Processo' },
+    { property: 'emergia', label: 'Emergia Oculta Envolvida' }
   ];
 
   items = [
-    { aspecto: 'Perspectiva', emergia: 'Foco na natureza', acv: 'Foco no consumidor' },
-    { aspecto: 'O que mede?', emergia: 'Energia solar investida', acv: 'Impactos ambientais diretos' },
-    { aspecto: 'Inclui renováveis?', emergia: 'Sim', acv: 'Nem sempre' },
-    { aspecto: 'Unidade usada', emergia: 'Em joules solares (sej)', acv: 'Diversas (kg CO₂, MJ...)' }
+    {
+      item: 'Treinamento de um modelo de IA',
+      emergia: 'Energia elétrica dos servidores, construção dos data centers, manutenção de sistemas'
+    },
+    {
+      item: 'Construção de um servidor',
+      emergia: 'Mineração de metais, produção industrial, transporte global'
+    },
+    {
+      item: 'Equipe técnica',
+      emergia: 'Educação, infraestrutura de escolas/universidades, deslocamento, energia humana'
+    },
+    {
+      item: 'Rede de internet',
+      emergia: 'Infraestrutura de cabos, torres, manutenção, energia de operação contínua'
+    }
   ];
 
   spacingSmall: PoTableColumnSpacing = PoTableColumnSpacing.Small;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   goToCalculator() {
     this.router.navigate(['/calculadora']);

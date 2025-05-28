@@ -1,0 +1,49 @@
+{
+  "calcularEmergia": {
+    "processo": {
+      "nome": "IA Diagnóstico Médico",
+      "fase": "INFERENCIA",
+      "inferencias": 25000
+    },
+    "recursosComputacionais": {
+      "energiaConsumida": 150.5,
+      "uevEnergia": 84000
+    },
+    "recursosHumanos": {
+      "horasTrabalho": 120,
+      "uevHora": 320000
+    },
+    "materiaisEquipamentos": {
+      "custoEquipamento": 20000,
+      "uevEquipamento": 1800000
+    }
+  },
+  "resultadoEmergia": {
+    "entradaIA": {
+      "nome": "IA Diagnóstico Médico",
+      "fase": "INFERENCIA",
+      "horas": 120,
+      "inferencias": 25000
+    },
+    "recursosComputacionais": {
+      "energiaConsumida": 150.5,
+      "uevEnergia": 84000,
+      "emergia": 12684000
+    },
+    "recursosHumanos": {
+      "horasTrabalho": 120,
+      "uevHora": 320000,
+      "emergia": 38400000
+    },
+    "materiaisEquipamentos": {
+      "custoEquipamento": 20000,
+      "uevEquipamento": 1800000,
+      "emergia": 36000000000
+    },
+    "resultadoFinal": {
+      "total": 36051084000,
+      "porHora": 300425700,
+      "porInferencia": 1442043
+    }
+  }
+}
