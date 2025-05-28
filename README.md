@@ -1,5 +1,5 @@
-# Emergia - Frontend
-Projeto desenvolvido como parte da Atividade Prática Supervisionada (APS) do curso de Bacharelado em Ciência da Computação. Este repositório contém o frontend do conceito Emergia, desenvolvido em Angular com PO UI.
+# Calculadora de Emergia na IA - Frontend
+Este repositório contém o frontend da aplicação Calculadora de Emergia na IA, desenvolvida com Angular e PO UI, como parte da Atividade Prática Supervisionada (APS) do curso de Bacharelado em Ciência da Computação. A aplicação visa calcular o consumo de Emergia em sistemas de Inteligência Artificial (IA), utilizando uma calculadora interativa.
 
 ## Tecnologias Utilizadas
 
@@ -12,11 +12,11 @@ Projeto desenvolvido como parte da Atividade Prática Supervisionada (APS) do cu
 
 1. Clone o repositório para sua máquina local:
     ```bash
-    git clone https://github.com/AnnaBia/frontend-emergy.git
+    git clone https://github.com/AnnaBia/frontend-emergia-ia.git
     ```
 2. Navegue até o diretório do projeto:
     ```bash
-    cd frontend-emergy
+    cd frontend-emergia-ia
     ```
 3. Instale as dependências do projeto:
     ```bash
@@ -35,3 +35,7 @@ Projeto desenvolvido como parte da Atividade Prática Supervisionada (APS) do cu
     ```bash
     ng serve --o
     ```
+
+## Observação
+
+Para efetuar de fato o cálculo de emergia, é necessário que o backend esteja rodando. Acesse o repositório do backend para saber como configurá-lo: [Backend Calculadora de Emergia na IA](https://github.com/AnnaBia/backend-emergia-ia).
