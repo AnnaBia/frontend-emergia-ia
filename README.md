@@ -38,4 +38,4 @@ Este repositório contém o frontend da aplicação Calculadora de Emergia na IA
 
 ## Observação
 
-Para efetuar de fato o cálculo de emergia, é necessário que o backend esteja rodando. Acesse o repositório do backend para saber como configurá-lo: [Backend Calculadora de Emergia na IA](https://github.com/AnnaBia/backend-emergia-ia).
+Para efetuar de fato o cálculo de emergia, é necessário que o backend esteja rodando. Acesse e configure o repositório: [Backend Calculadora de Emergia na IA](https://github.com/AnnaBia/backend-emergia-ia).
