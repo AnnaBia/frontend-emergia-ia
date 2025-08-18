@@ -1,7 +1,8 @@
 <po-page-default>
   <div class="page-wrapper">
 
-    <div *ngIf="showResults" class="container-wrapper po-pt-2">
+    @if (showResults) {
+    <div class="container-wrapper po-pt-2">
       <po-container class="po-lg-10" p-title="Resultados">
 
         <div class="po-row po-lg-12 po-pb-2">
@@ -50,6 +51,7 @@
         </div>
       </po-container>
     </div>
+    }
     <div class="po-row po-pt-2 footer">
       <po-button p-label="Nova simulação" (p-click)="goToCalculator()"></po-button>
       <po-button p-label="Voltar para o início" p-kind="primary" (p-click)="goToHome()"></po-button>
